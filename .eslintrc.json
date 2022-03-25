@@ -27,12 +27,21 @@
     "react/prop-types": "off",
     "react/jsx-filename-extension": ["error", {
       "extensions": [".tsx", ".ts"]
-    }]
+    }],
+    "import/extensions": ["error", {
+      "extensions": [".tsx", ".ts"]
+    }],
+    "import/no-unresolved": [
+      1, 
+      { "caseSensitive": false }
+    ]
+    
   },
   "settings": {
     "react": {
       "pragma": "React",
       "version": "detect"
-    }
+    },
+    "import/resolver": "webpack"
   }
 }

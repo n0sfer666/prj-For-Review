@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Test from './components/test/test';
 
 function App() {
-  return <h1>It&apos;s Alive!!!</h1>;
+  return (
+    <Test />
+  );
 }
 
 ReactDOM.render(
