@@ -2,6 +2,7 @@ import path from 'path';
 import { Configuration as WebpackConfiguration, HotModuleReplacementPlugin } from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
@@ -43,8 +44,15 @@ const config: Configuration = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/favicons', to: 'favicons' },
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
+      favicon: 'public/favicons/favicon.ico',
+      filename: 'index.html',
     }),
     new HotModuleReplacementPlugin(),
   ],
