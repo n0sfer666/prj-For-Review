@@ -36,7 +36,21 @@ const config: Configuration = {
           'css-loader',
           'postcss-loader',
           'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                './src/styles/**/*.scss',
+              ],
+            },
+          },
         ],
+      }, {
+        test: /\.(ttf|eot|svg|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
       },
     ],
   },

@@ -1,0 +1,32 @@
+html, body, h1, h2, h3, p, button, br, ul, li, pre, input {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  height: 100%;
+}
+
+form {
+  width: inherit;
+  height: inherit;
+}
+
+a {
+text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+br {
+  width: 0;
+  height: 0;
+}
