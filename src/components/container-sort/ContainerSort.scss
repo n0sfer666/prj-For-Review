@@ -1,0 +1,16 @@
+.container-sort {
+  width: $sort-width;
+  height: 100%;
+  padding: 35px 21px;
+  background-color: $sort-background;
+
+  &__headline {
+    font: $sort-headline;
+    color: $headline-color;
+  }
+
+  &__button {
+    width: fit-content;
+    margin: 10px 0;
+  }
+}

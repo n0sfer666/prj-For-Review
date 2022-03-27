@@ -1,2 +1,20 @@
+// font
 $main-font: Roboto, sans;
-$test: 56px/60px $main-font;
+$sort-headline: 12px/14.06px $main-font;
+$button-sort: $sort-headline;
+$card-list-title: 11px/12.89px $main-font;
+$card-list-more: $sort-headline;
+$card-headline: 14px/16.41px $main-font;
+$card-input-title: 8px/9.38px $main-font;
+$card-input-placeholder: 10px/11.72px $main-font;
+// color
+$button-background: hsla(238, 84%, 62%, 1);
+$sort-background: hsla(0, 0%, 74%, 1);
+$main-background: white;
+$button-font-color: white;
+$headline-color: black;
+$input-border-color: hsla(0, 0%, 85%, 1);
+$input-placeholder-color: hsla(0, 0%, 0%, 0.3);
+//geometry
+$body-width: 665px;
+$sort-width: calc((150 * 100%) / $body-width);

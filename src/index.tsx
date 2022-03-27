@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './components/test/test';
 
 function App() {
   return (
-    <Test />
+    <noscript>You need to enable JavaScript to run this app.</noscript>
   );
 }
 
