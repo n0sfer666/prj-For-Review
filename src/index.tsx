@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 function App() {
-  // const getUsers =
+  const [state, setState] = useState('loading');
   const users: Array<Record<string, unknown>> = [];
   fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json(), (error) => console.error(error))
-    .then((data: Array<Record<string, unknown>>) => data.forEach(
-      (user: Record<string, unknown>) => {
-        users.push(user);
-      },
-    ));
+    .then((response) => response.json(), () => setState('error'))
+    .then((data: Array<Record<string, unknown>>) => {
+      data.forEach(
+        (user: Record<string, unknown>) => {
+          users.push(user);
+        },
+      );
+      setState('loaded');
+    });
 
   return (
     <div>
